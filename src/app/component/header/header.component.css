@@ -1,0 +1,145 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    background-color: #c267007e;
+    color: #a15b00;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px;
+}
+
+.titre {
+    flex-grow: 1;
+    text-align: center;
+    margin-right: 180px;
+}
+
+.panier img {
+    height: 30px;
+}
+
+.Btn {
+    width: 130px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #c267007e;
+    border: none;
+    color: #ffffff;
+    font-weight: 600;
+    gap: 8px;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.103);
+    position: relative;
+    overflow: hidden;
+    transition-duration: .3s;
+    margin-left: 50px;
+}
+
+.svgIcon {
+    width: 16px;
+}
+
+.svgIcon path {
+    fill: white;
+}
+
+.Btn::before {
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    content: "";
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    left: -100%;
+    top: 0;
+    transition-duration: .3s;
+    mix-blend-mode: difference;
+}
+
+
+.Btn:hover::before {
+    transition-duration: .3s;
+    transform: translate(100%, -50%);
+    border-radius: 0;
+}
+
+.Btn:hover {
+    background-color: #000000; /* Remplace la couleur de fond au survol */
+}
+
+.Btn:active {
+    transform: translate(5px, 5px);
+    transition-duration: .3s;
+}
+
+.cart {
+    position:fixed;
+    top:20px;
+    right:20px;
+    width:50px;
+    height:50px;
+    background:#292d48;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:5px;
+    i {
+      font-size:25px;
+      color:white;
+    }
+    &:before {
+      content:attr(data-totalitems);
+      font-size:12px;
+      font-weight:600;
+      position:absolute;
+      top:-12px;
+      right:-12px;
+      background:#2bd156;
+      line-height:24px;
+      padding:0 5px;
+      height:24px;
+      min-width:24px;
+      color:white;
+      text-align:center;
+      border-radius:24px;
+    }
+    &.shake {
+      animation: shakeCart .4s ease-in-out forwards;
+    }
+  }
+  
+  @keyframes xAxis {
+    100% {
+      transform: translateX(calc(50vw - 105px));
+    }
+  }
+  
+  @keyframes yAxis {
+    100% {
+      transform: translateY(calc(-50vh + 75px));
+    }
+  }
+  
+  @keyframes shakeCart {
+    25% {
+      transform:translateX(6px)
+    }
+    50% {
+      transform:translateX(-4px);
+    }
+    75% {
+      transform:translateX(2px);
+    }
+    100% {
+      transform:translateX(0);
+    }
+  }

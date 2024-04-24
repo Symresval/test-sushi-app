@@ -1,0 +1,18 @@
+.footer {
+    background-color: #c267007e;
+    color: #a15b00;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    height: 80px; /* Ajustez la hauteur en fonction de votre design */
+}
+
+.politique-confidentialite a {
+    color: #8a4300;
+    text-decoration: underline;
+    margin-left: 855px;
+}
+
+.politique-confidentialite a:hover {
+    color: #8a430050; /* Change la couleur du lien au survol */
+}

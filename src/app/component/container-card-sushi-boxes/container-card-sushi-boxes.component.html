@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13 Boxes</title>
+    <link rel="stylesheet" type="text/css" href="container-card-sushi-boxes.component.css">
+    <link rel="stylesheet" type="text/css" href="../header/header.component.css">
+    <script src="../header/header.component.js"></script>
+    <script src="container-card-sushi-boxes.component.js"></script>
+</head>
+<section class="content">
+<body>
+
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="../assets/img/tasty-blend.png" alt="logo">
+                        <p>Tasty Blend</p>
+                        <p>12.50 €</p>
+                      
+                    </div>
+                    <div class="flip-card-back">
+                        <p class="title">TASTY BLEND</p>
+                        <br>
+                        <p>Avocat / Saumon / Cheese</p>
+                        <p></p>
+                        <ul>
+                            <li>3 California Saumon Avocat</li>
+                            <li>3 Sushi Saumon</li>
+                            <li>3 Spring Avocat Cheese</li>
+                            <li>3 California Spacific</li>
+                            <li>1 Endamame / Salade de chou</li>
+                        </ul>
+                        <button (click)='ajouterAuPanier({"id":1,"nbPieces":12,"nom":"Tasty Blend","image":"tasty-blend","prix":12.5,"saveurs":["avocat","saumon","cheese"],"aliments":[{"nom":"California Saumon Avocat","quantite":3.0},{"nom":"Sushi Saumon","quantite":3.0},{"nom":"Spring Avocat Cheese","quantite":3.0},{"nom":"California pacific","quantite":3.0},{"nom":"Edamame/Salade de chou","quantite":1.0}]},1)'>Ajouter au panier</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="../assets/img/salmon-original.png" alt="logo">
+                        <p>Saumon Original</p>
+                        <p>12.50 €</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p class="title">SAUMON ORIGINAL</p>
+                        <br>
+                        <p>Avocat / Saumon </p>
+                        <p></p>
+                        <p></p>
+                        <ul>
+                            <li>6 California Saumon Avocat</li>
+                            <li>5 Sushi Saumon</li>
+                            <li>1 Endamame / Salade de chou</li>
+                        </ul>
+                        <button (click)='ajouterAuPanier({"id":3,"nbPieces":11,"nom":"Saumon Original","image":"salmon-original","prix":12.5,"saveurs":["avocat","saumon"],"aliments":[{"nom":"California Saumon Avocat","quantite":6.0},{"nom":"Sushi Saumon","quantite":5.0},{"nom":"Edamame/Salade de chou","quantite":1.0}]},1)'>Ajouter au panier</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="../assets/img/amateur-mix.png" alt="logo">
+                        <p>Amateur Mix</p>
+                        <p>15.90 €</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p class="title">AMATEUR MIX</p>
+                        <p>Avocat / Saumon / Cheese / Coriandre</p>
+                        <ul>
+                            <li>3 Maki Salmon Rolls</li>
+                            <li>3 Spring Avocat</li>
+                            <li>6 Maki Cheese Avocat</li>
+                            <li>3 California Saumon Avocat</li>
+                            <li>1 Endamame / Salade de chou</li>
+                        </ul>
+                        <button (click)='ajouterAuPanier({"id":2,"nbPieces":18,"nom":"Amateur Mix","image":"amateur-mix","prix":15.9,"saveurs":["coriandre","avocat","saumon","cheese"],"aliments":[{"nom":"Maki Salmon Roll","quantite":3.0},{"nom":"Spring Saumon Avocat","quantite":3.0},{"nom":"Maki Cheese Avocat","quantite":6.0},{"nom":"California Saumon Avocat","quantite":3.0},{"nom":"Edamame/Salade de chou","quantite":1.0}]},1)'>Ajouter au panier</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="../assets/img/master-mix.png" alt="logo">
+                        <p>Master Mix</p>
+                        <p>15.90 €</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p class="title">MASTER MIX</p>
+                        <p>Saumon / Thon / Avocat</p>
+                        <ul>
+                            <li>4 Sushi Saumon</li>
+                            <li>2 Sushi Thon</li>
+                            <li>3 California Thon Avocat</li>
+                            <li>3 California Saumon Avocat</li>
+                            <li>1 Endamame / Salade de chou</li>
+                        </ul>
+                        <button (click)='ajouterAuPanier({"id":6,"nbPieces":12,"nom":"Master Mix","image":"master-mix","prix":15.9,"saveurs":["avocat","thon","saumon"],"aliments":[{"nom":"Sushi Saumon","quantite":4.0},{"nom":"Sushi Thon","quantite":2.0},{"nom":"California Thon Avocat","quantite":3.0},{"nom":"California Saumon Avocat","quantite":3.0},{"nom":"Edamame / Salade de chou","quantite":1.0}]},1)'>Ajouter au panier</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="../assets/img/salmon-lovers.png" alt="logo">
+                        <p>Saumon Lovers</p>
+                        <p>15.90 €</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p class="title">Saumon Lovers</p>
+                        <p>Coriandre/ Saumon/ Avocat</p>
+                        <p></p>
+                        <ul>
+                            <li>6 California Saumon Avocat</li>
+                            <li>6 Spring Saumon Avocat</li>
+                            <li>6 Sushi Saumon</li>
+                            <li>1 Endamame / Salade de chou</li>
+                        </ul>
+                        <button (click)='ajouterAuPanier({"id":4,"nbPieces":18,"nom":"Salmon Lovers","image":"salmon-lovers","prix":15.9,"saveurs":["coriandre","avocat","saumon"],"aliments":[{"nom":"California Saumon Avocat","quantite":6.0},{"nom":"Spring Saumon Avocat","quantite":6.0},{"nom":"Sushi Saumon","quantite":6.0},{"nom":"Edamame/Salade de chou","quantite":1.0}]},1)'>Ajouter au panier</button>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="../assets/img/salmon-classic.png" alt="logo">
+                        <p>Saumon Classique</p>
+                        <p>15.90 €</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p class="title">Saumon Classique</p>
+                        <p>Saumon</p>
+                        <p></p>
+                        <p></p>
+                        <ul>
+                            <li>10 Sushi Saumon</li>
+                            <li>1 Edamame/Salade de chou</li>
+                        </ul>
+                        <button (click)='ajouterAuPanier({"id":5,"nbPieces":10,"nom":"Salmon Classic","image":"salmon-classic","prix":15.9,"saveurs":["saumon"],"aliments":[{"nom":"Sushi Saumon","quantite":10.0},{"nom":"Edamame/Salade de chou","quantite":1.0}]},1)'>Ajouter au panier</button>
+
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="../assets/img/sando-box-chicken-katsu.png" alt="logo">
+                        <p>Sando Chicken Katsu</p>
+                        <p>15.90 €</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p class="title">Sando Chicken Katsu</p>
+                        <p>Saumon/ Viande/ Avocat/ Cheese</p>
+                        <ul>
+                            <li>0.5 Sando Chicken Katsu</li>
+                            <li>6 Maki Salmon Roll</li>
+                            <li>6 California Saumon Avocat</li>
+                            <li>6 California Thon Cuit Avocat</li>
+                            <li>1 Endamame / Salade de chou</li>
+                        </ul>
+                        <button (click)='ajouterAuPanier({"id":8,"nbPieces":13,"nom":"Sando Box Chicken Katsu","image":"sando-box-chicken-katsu","prix":15.9,"saveurs":["viande","avocat","saumon","cheese"],"aliments":[{"nom":"Sando Chicken Katsu","quantite":0.5},{"nom":"Maki Salmon Roll","quantite":6.0},{"nom":"California Saumon Avocat","quantite":6.0},{"nom":"California Thon Cuit Avocat","quantite":6.0},{"nom":"Edamame / Salade de chou","quantite":1.0}]},1)'>Ajouter au panier</button>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="../assets/img/sunrise.png" alt="logo">
+                        <p>SUNRISE</p>
+                        <p>15.90 €</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p class="title">SUNRISE</p>
+                        <p>Saumon/ Thon/ Avocat/ Cheese</p>
+                        <p></p>
+                        <ul>
+                            <li>6 Maki Salmon Roll</li>
+                            <li>6 California Saumon Avocat</li>
+                            <li>6 California Thon Cuit Avocat</li>
+                            <li>1 Endamame / Salade de chou</li>
+                        </ul>
+                        <button (click)='ajouterAuPanier({"id":7,"nbPieces":18,"nom":"Sunrise","image":"sunrise","prix":15.9,"saveurs":["avocat","thon","saumon","cheese"],"aliments":[{"nom":"Maki Salmon Roll","quantite":6.0},{"nom":"California Saumon Avocat","quantite":6.0},{"nom":"California Thon Cuit Avocat","quantite":6.0},{"nom":"Edamame / Salade de chou","quantite":1.0}]},1)'>Ajouter au panier</button>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="../assets/img/sando-box-salmon-aburi.png" alt="logo">
+                        <p>SANDO SALMON ABURI</p>
+                        <p>15.90 €</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p class="title">SANDO SALMON ABURI</p>
+                        <p>Saumon/ Thon/ Avocat</p>
+                        <p></p>
+                        <ul>
+                            <li>0.5 Sando Salmon Aburi</li>
+                            <li>6 California Saumon Avocat</li>
+                            <li>6 California Thon Cuit Avocat</li>
+                            <li>1 Endamame / Salade de chou</li>
+                        </ul>
+                        <button (click)='ajouterAuPanier({"id":9,"nbPieces":13,"nom":"Sando Box Salmon Aburi","image":"sando-box-salmon-aburi","prix":15.9,"saveurs":["avocat","thon","saumon"],"aliments":[{"nom":"Sando Salmon Aburi","quantite":0.5},{"nom":"California Saumon Avocat","quantite":6.0},{"nom":"California Thon Cuit Avocat","quantite":6.0},{"nom":"Edamame / Salade de chou","quantite":1.0}]},1)'>Ajouter au panier</button>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="../assets/img/gourmet-mix.png" alt="logo">
+                        <p>GOURMET MIX</p>
+                        <p>24.50 €</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p class="title">GOURMET MIX</p>
+                        <p>Coriande/ Spicy/  Saumon/ Viande/ Avocat/ Seriole lalandi</p>
+                        <ul>
+                            <li>6 Spring tataki Saumon</li>
+                            <li>4 Signature Dragon Roll</li>
+                            <li>3 California French Touch</li>
+                            <li>6 California French salmon</li>
+                            <li>3 California Yellowtail Ponzu</li>
+                            <li>1 Endamame / Salade de chou</li>
+                        </ul>
+                        <button (click)='ajouterAuPanier({"id":12,"nbPieces":22,"nom":"Gourmet Mix","image":"gourmet-mix","prix":24.5,"saveurs":["viande","seriole lalandi","avocat","coriande","spicy","saumon"],"aliments":[{"nom":"Spring tataki Saumon","quantite":6.0},{"nom":"Signature Dragon Roll","quantite":4.0},{"nom":"California French Touch","quantite":3.0},{"nom":"California French salmon","quantite":6.0},{"nom":"California Yellowtail Ponzu","quantite":3.0},{"nom":"Edamame / Salade de chou","quantite":1.0}]},1)'>Ajouter au panier</button>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="../assets/img/california-dream.png" alt="logo">
+                        <p>CALIFORNIA DREAM</p>
+                        <p>15.90 €</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p class="title">CALIFORNIA DREAM</p>
+                        <p>Spicy/  Saumon/ Thon/ Crevette/ Viande/ Avocat</p>
+                        <ul>
+                            <li>6 California Saumon Avocat</li>
+                            <li>6 California Crevette</li>
+                            <li>6 California Thon Cuit Avocat</li>
+                            <li>6 California Chicken Katsu</li>
+                            <li>1 Endamame / Salade de chou</li>
+                        </ul>
+                        <button (click)='ajouterAuPanier({"id":11,"nbPieces":24,"nom":"California Dream","image":"california-dream","prix":19.9,"saveurs":["viande","crevette","avocat","thon","spicy","saumon"],"aliments":[{"nom":"California Saumon Avocat","quantite":6.0},{"nom":"California Crevette","quantite":6.0},{"nom":"California Thon Cuit Avocat","quantite":6.0},{"nom":"California Chicken Katsu","quantite":6.0},{"nom":"Edamame / Salade de chou","quantite":1.0}]},1)'>Ajouter au panier</button>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="../assets/img/super-salmon.png" alt="logo">
+                        <p>SUPER SAUMON</p>
+                        <p>19.90 €</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p class="title">SUPER SAUMON</p>
+                        <p>Coriande/ Saumon/ Avocat/ Cheese</p>
+                        <ul>
+                            <li>6 California Saumon Avocat</li>
+                            <li>6 Maki Salmon Roll</li>
+                            <li>6 Maki Salmon</li>
+                            <li>6 Spring Saumon Avocat</li>
+                            <li>1 Endamame / Salade de chou</li>
+                        </ul>
+                        <button (click)='ajouterAuPanier({"id":10,"nbPieces":24,"nom":"Super Salmon","image":"super-salmon","prix":19.9,"saveurs":["coriandre","avocat","saumon","cheese"],"aliments":[{"nom":"California Saumon Avocat","quantite":6.0},{"nom":"Maki Salmon Roll","quantite":6.0},{"nom":"Maki Salmon","quantite":6.0},{"nom":"Spring Saumon Avocat","quantite":6.0},{"nom":"Edamame / Salade de chou","quantite":1.0}]},1)'>Ajouter au panier</button>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row1">
+
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="../assets/img/fresh-mix.png" alt="logo">
+                        <p>FRESH MIX</p>
+                        <p>24.50 €</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p class="title">FRESH MIX</p>
+                        <p>Spicy/ Saumon/ Thon/ Avocat/ Cheese </p>
+                        <ul>
+                            <li>4 Signature Rock'n Roll</li>
+                            <li>6 Maki Salmon Roll</li>
+                            <li>6 California Pacific</li>
+                            <li>4 Sushi Salmon</li>
+                            <li>2 Sushi Saumon Tsukudani</li>
+                            <li>1 Endamame / Salade de chou</li>
+                        </ul>
+                        <button (click)='ajouterAuPanier({"id":10,"nbPieces":24,"nom":"Super Salmon","image":"super-salmon","prix":19.9,"saveurs":["coriandre","avocat","saumon","cheese"],"aliments":[{"nom":"California Saumon Avocat","quantite":6.0},{"nom":"Maki Salmon Roll","quantite":6.0},{"nom":"Maki Salmon","quantite":6.0},{"nom":"Spring Saumon Avocat","quantite":6.0},{"nom":"Edamame / Salade de chou","quantite":1.0}]},1)'>Ajouter au panier</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+</section>
+
+</html>

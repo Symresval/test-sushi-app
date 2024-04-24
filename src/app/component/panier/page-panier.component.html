@@ -1,0 +1,79 @@
+<!-- Bilan de votre panier : -->
+<div class="container bg-white rounded-4 p-0">
+    <div class="rounded-2 bg-body-secondary p-2 m-2">
+        <h4>Bilan de votre panier :</h4>
+        <div class="m-4">
+            <ul>    
+                <!-- Contenu du bilan du panier sera affiché ici -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Détails de votre commande : -->
+    <div *ngIf="panier.length > 0">
+        <div class="rounded-2 bg-body-secondary p-2 m-2">
+            <h4>Détails de votre commande :</h4>
+            <table class="table table-hover table-striped">
+                <!-- En-têtes du tableau -->
+                <thead class="table-primary" >
+                    <tr class="table-in text-center">
+                        <th>NOM DE LA BOX</th>
+                        <th>QUANTITE</th>
+                        <th><i class="bi bi-trash-fill"></i></th>
+                        <th>PRIX UNITAIRE</th>
+                        <th>PRIX</th>
+                    </tr>
+                </thead>
+                <!-- Corps du tableau -->
+                <tbody>
+                    <ng-container *ngFor="let ligne of panier">
+                        <tr class="table-secondary table-group-divider align-baseline border-black">
+                            <!-- Colonnes avec les détails de chaque ligne du panier -->
+                            <td class="w-25">{{ ligne.box.nom }}</td>
+                            <td class="text-center">
+                                <!-- Boutons d'ajout et de suppression de quantité -->
+                                <button class="btn" (click)="enleverQuantite(ligne)"><i class="bi bi-dash-circle-fill"></i></button>
+                                {{ligne.qte}}
+                                <button class="btn" (click)="ajouterQuantite(ligne)"><i class="bi bi-plus-circle-fill"></i></button>
+                            </td>
+                            <!-- Bouton de suppression de ligne -->
+                            <td class="text-center">
+                                <button class="btn btn-outline-danger" style="font-size: 0.9em;" (click)="supprimerLigne(ligne)"><i class="bi bi-trash-fill"></i></button>
+                            </td>
+                            <!-- Prix unitaire et prix total de la ligne -->
+                            <td class="text-center">{{ ligne.box.prix }}€</td>
+                            <td class="text-center">{{ (ligne.qte * ligne.box.prix).toFixed(2) }}€</td>
+                        </tr>
+                    </ng-container>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Validation du panier ou annulation de la commande : -->
+    <div class="bg-warning rounded-bottom-4 p-2">        
+        <h3>Vos actions sur votre panier :</h3>
+        <div class="row m-4">
+            <div *ngIf="panier.length > 0 else panierVide">
+                <div class="col">
+                    <!-- Boutons pour valider la commande ou vider le panier -->
+                    <button class="btn btn-success m-2">VALIDER VOTRE COMMANDE</button>
+                    <button class="btn btn-danger m-2">VIDER LE PANIER</button>
+                </div>
+                <div class="col text-end">
+                    <!-- Affichage du total du panier -->
+                    <h3><b>Total : {{ total.toFixed(2) }}€</b></h3>
+                </div>
+            </div>
+            <!-- Message si le panier est vide avec un lien pour ajouter des articles -->
+            <ng-template #panierVide>
+                <div class="col-5">
+                    <b>Votre panier est vide, veuillez procéder à votre commande : </b>
+                </div>
+                <div class="col-3">
+                    <a class="btn btn-info" routerLink="" routerLinkActive="active">Choisir mes boxes</a>
+                </div>
+            </ng-template>        
+        </div>
+    </div>
+</div>
